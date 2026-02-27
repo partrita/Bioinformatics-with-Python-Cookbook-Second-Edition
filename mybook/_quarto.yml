@@ -7,75 +7,136 @@ book:
   author: "Tiago Antao"
   chapters:
     - index.qmd
-    - part: "Chapter 1: Interfacing with R"
+    - part: "Chapter 1: R과 연동하기"
       chapters:
-        - Chapter01/Interfacing_R.ipynb
-        - Chapter01/R_magic.ipynb
-    - part: "Chapter 2: Next Gen Sequencing Data"
+        - file: Chapter01/Interfacing_R.ipynb
+          text: "R 인터페이싱 (rpy2)"
+        - file: Chapter01/R_magic.ipynb
+          text: "R 매직 커맨드 활용"
+    - part: "Chapter 2: 차세대 서열 분석 (NGS)"
       chapters:
-        - Chapter02/Working_with_FASTQ.ipynb
-        - Chapter02/Working_with_BAM.ipynb
-        - Chapter02/Working_with_VCF.ipynb
-        - Chapter02/Filtering_SNPs.ipynb
-        - Chapter02/Processing_BED_with_HTSeq.ipynb
-        - Chapter02/Accessing_Databases.ipynb
-        - Chapter02/Basic_Sequence_Processing.ipynb
-    - part: "Chapter 3: Genomes and Annotations"
+        - file: Chapter02/Working_with_FASTQ.ipynb
+          text: "FASTQ 데이터 처리"
+        - file: Chapter02/Working_with_BAM.ipynb
+          text: "BAM 및 정렬 데이터 분석"
+        - file: Chapter02/Working_with_VCF.ipynb
+          text: "VCF 파일을 이용한 변이 분석"
+        - file: Chapter02/Filtering_SNPs.ipynb
+          text: "SNP 필터링 및 품질 관리"
+        - file: Chapter02/Processing_BED_with_HTSeq.ipynb
+          text: "HTSeq 활용 (BED 처리)"
+        - file: Chapter02/Accessing_Databases.ipynb
+          text: "생물정보학 DB 접근"
+        - file: Chapter02/Basic_Sequence_Processing.ipynb
+          text: "기초 서열 처리"
+    - part: "Chapter 3: 유전체학 (Genomics)"
       chapters:
-        - Chapter03/Reference_Genome.ipynb
-        - Chapter03/Getting_Gene.ipynb
-        - Chapter03/Annotations.ipynb
-        - Chapter03/Gene_Ontology.ipynb
-        - Chapter03/Low_Quality.ipynb
-        - Chapter03/Orthology.ipynb
-    - part: "Chapter 4: Population Genetics"
+        - file: Chapter03/Reference_Genome.ipynb
+          text: "참조 유전체 활용"
+        - file: Chapter03/Getting_Gene.ipynb
+          text: "유전자 정보 추출"
+        - file: Chapter03/Annotations.ipynb
+          text: "유전체 주석 탐색"
+        - file: Chapter03/Gene_Ontology.ipynb
+          text: "유전자 온톨로지(GO)"
+        - file: Chapter03/Low_Quality.ipynb
+          text: "저품질 참조 유전체 처리"
+        - file: Chapter03/Orthology.ipynb
+          text: "상동성(Orthology) 분석"
+    - part: "Chapter 4: 집단 유전학 (PopGen)"
       chapters:
-        - Chapter04/Data_Formats.ipynb
-        - Chapter04/Exploratory_Analysis.ipynb
-        - Chapter04/PCA.ipynb
-        - Chapter04/Admixture.ipynb
-    - part: "Chapter 5: Complex Population Genetics"
+        - file: Chapter04/Data_Formats.ipynb
+          text: "데이터 포맷 (PLINK)"
+        - file: Chapter04/Genepop_Format.ipynb
+          text: "Genepop 데이터 포맷"
+        - file: Chapter04/Exploratory_Analysis.ipynb
+          text: "탐색적 데이터 분석 (EDA)"
+        - file: Chapter04/F-stats.ipynb
+          text: "F-statistics 분석"
+        - file: Chapter04/PCA.ipynb
+          text: "주성분 분석 (PCA)"
+        - file: Chapter04/Admixture.ipynb
+          text: "혼합(Admixture) 분석"
+    - part: "Chapter 5: 집단 유전학 시뮬레이션"
       chapters:
-        - Chapter05/Basic_SimuPOP.ipynb
-        - Chapter05/Pop_Structure.ipynb
-        - Chapter05/Selection.ipynb
-        - Chapter05/Complex.ipynb
-    - part: "Chapter 6: Phylogenetics"
+        - file: Chapter05/Basic_SimuPOP.ipynb
+          text: "simuPOP 기초"
+        - file: Chapter05/Pop_Structure.ipynb
+          text: "집단 구조 모델링"
+        - file: Chapter05/Selection.ipynb
+          text: "선택압 시뮬레이션"
+        - file: Chapter05/Complex.ipynb
+          text: "복잡한 시나리오 모델링"
+    - part: "Chapter 6: 계통학 (Phylogenetics)"
       chapters:
-        - Chapter06/Exploration.ipynb
-        - Chapter06/Reconstruction.ipynb
-        - Chapter06/Trees.ipynb
-        - Chapter06/Visualization.ipynb
-        - Chapter06/Selection.ipynb
-    - part: "Chapter 7: Proteomics"
+        - file: Chapter06/Exploration.ipynb
+          text: "데이터 탐색 및 전처리"
+        - file: Chapter06/Alignment.ipynb
+          text: "서열 정렬 (Alignment)"
+        - file: Chapter06/Comparison.ipynb
+          text: "서열 비교 분석"
+        - file: Chapter06/Reconstruction.ipynb
+          text: "계통 나무 재구성"
+        - file: Chapter06/Trees.ipynb
+          text: "나무 구조 분석"
+        - file: Chapter06/Visualization.ipynb
+          text: "계통 시각화"
+        - file: Chapter06/Selection.ipynb
+          text: "진화적 선택 분석"
+    - part: "Chapter 7: 단백질체학 (Proteomics)"
       chapters:
-        - Chapter07/Parser.ipynb
-        - Chapter07/Stats.ipynb
-        - Chapter07/PDB.ipynb
-        - Chapter07/mmCIF.ipynb
-        - Chapter07/Distance.ipynb
-        - Chapter07/Mass.ipynb
-    - part: "Chapter 9: HPC"
+        - file: Chapter07/Intro.ipynb
+          text: "단백질 구조 DB 접근"
+        - file: Chapter07/Parser.ipynb
+          text: "PDB 파서 구현"
+        - file: Chapter07/Stats.ipynb
+          text: "구조 통계 분석"
+        - file: Chapter07/PDB.ipynb
+          text: "Bio.PDB 활용 기초"
+        - file: Chapter07/mmCIF.ipynb
+          text: "mmCIF 파일 파싱"
+        - file: Chapter07/Distance.ipynb
+          text: "원자 간 거리 계산"
+        - file: Chapter07/Mass.ipynb
+          text: "기하학적 연산"
+    - part: "Chapter 9: 고성능 연산 (HPC)"
       chapters:
-        - Chapter09/Cython_Numba.ipynb
-        - Chapter09/Dask.ipynb
-        - Chapter09/HDF5.ipynb
-        - Chapter09/Parquet.ipynb
-        - Chapter09/Spark.ipynb
-    - part: "Chapter 10: Other Topics"
+        - file: Chapter09/Cython_Numba.ipynb
+          text: "Cython 및 Numba 최적화"
+        - file: Chapter09/Dask.ipynb
+          text: "Dask 병렬 처리"
+        - file: Chapter09/HDF5.ipynb
+          text: "HDF5 데이터 활용"
+        - file: Chapter09/Parquet.ipynb
+          text: "Parquet 포맷 활용"
+        - file: Chapter09/Spark.ipynb
+          text: "Apache Spark 활용"
+    - part: "Chapter 10: 기타 주제"
       chapters:
-        - Chapter10/Cytoscape.ipynb
-        - Chapter10/GBIF.ipynb
-        - Chapter10/Germline.ipynb
-        - Chapter10/QIIME2_Metagenomics.ipynb
-    - part: "Chapter 11: Machine Learning"
+        - file: Chapter10/Cytoscape.ipynb
+          text: "Cytoscape 시각화"
+        - file: Chapter10/GBIF.ipynb
+          text: "GBIF 생물다양성 데이터"
+        - file: Chapter10/GBIF_extra.ipynb
+          text: "GBIF 데이터 지오레퍼런싱"
+        - file: Chapter10/Germline.ipynb
+          text: "공유 세그먼트 분석"
+        - file: Chapter10/QIIME2_Metagenomics.ipynb
+          text: "QIIME2 메타게놈 분석"
+    - part: "Chapter 11: 머신러닝"
       chapters:
-        - Chapter11/Preparation.ipynb
-        - Chapter11/Exploration.ipynb
-        - Chapter11/ML_Preparation.ipynb
-        - Chapter11/SVM_Train.ipynb
-        - Chapter11/SVM_Fit.ipynb
-        - Chapter11/Decision_Trees.ipynb
+        - file: Chapter11/Preparation.ipynb
+          text: "데이터 준비 (2L)"
+        - file: Chapter11/Exploration.ipynb
+          text: "데이터 탐색"
+        - file: Chapter11/Mendel.ipynb
+          text: "멘델 유전 시뮬레이션 활용"
+        - file: Chapter11/ML_Preparation.ipynb
+          text: "특징량 추출 및 전처리"
+        - file: Chapter11/SVM_Train.ipynb
+          text: "SVM 모델 학습 및 피팅"
+        - file: Chapter11/Decision_Trees.ipynb
+          text: "의사결정 나무 분석"
 
 execute:
   freeze: auto
@@ -84,6 +145,6 @@ format:
   html:
     theme: cosmo
     code-copy: true
-    code-fold: true
+    code-fold: false
 
 
