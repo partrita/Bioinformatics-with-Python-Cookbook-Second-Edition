@@ -1,0 +1,11 @@
+[workspace]
+authors = ["deepthought <deepthough@postech.ac.kr>"]
+channels = ["conda-forge"]
+name = "Bioinformatics-with-Python-Cookbook-Second-Edition"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+quarto = ">=1.8.27,<2"

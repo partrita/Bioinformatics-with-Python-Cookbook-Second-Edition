@@ -1,0 +1,91 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "Bioinformatics with Python Cookbook"
+  author: "Tiago Antao"
+  chapters:
+    - index.qmd
+    - part: "Chapters"
+      chapters:
+        - part: "Chapter 1: Interfacing with R"
+          chapters:
+            - Chapter01/Interfacing_R.ipynb
+            - Chapter01/R_magic.ipynb
+        - part: "Chapter 2: Next Gen Sequencing Data"
+          chapters:
+            - Chapter02/Working_with_FASTQ.ipynb
+            - Chapter02/Working_with_BAM.ipynb
+            - Chapter02/Working_with_VCF.ipynb
+            - Chapter02/Filtering_SNPs.ipynb
+            - Chapter02/Processing_BED_with_HTSeq.ipynb
+            - Chapter02/Accessing_Databases.ipynb
+            - Chapter02/Basic_Sequence_Processing.ipynb
+        - part: "Chapter 3: Genomes and Annotations"
+          chapters:
+            - Chapter03/Reference_Genome.ipynb
+            - Chapter03/Getting_Gene.ipynb
+            - Chapter03/Annotations.ipynb
+            - Chapter03/Gene_Ontology.ipynb
+            - Chapter03/Low_Quality.ipynb
+            - Chapter03/Orthology.ipynb
+        - part: "Chapter 4: Population Genetics"
+          chapters:
+            - Chapter04/Data_Formats.ipynb
+            - Chapter04/Exploratory_Analysis.ipynb
+            - Chapter04/PCA.ipynb
+            - Chapter04/Admixture.ipynb
+        - part: "Chapter 5: Complex Population Genetics"
+          chapters:
+            - Chapter05/Basic_SimuPOP.ipynb
+            - Chapter05/Pop_Structure.ipynb
+            - Chapter05/Selection.ipynb
+            - Chapter05/Complex.ipynb
+        - part: "Chapter 6: Phylogenetics"
+          chapters:
+            - Chapter06/Exploration.ipynb
+            - Chapter06/Reconstruction.ipynb
+            - Chapter06/Trees.ipynb
+            - Chapter06/Visualization.ipynb
+            - Chapter06/Selection.ipynb
+        - part: "Chapter 7: Proteomics"
+          chapters:
+            - Chapter07/Parser.ipynb
+            - Chapter07/Stats.ipynb
+            - Chapter07/PDB.ipynb
+            - Chapter07/mmCIF.ipynb
+            - Chapter07/Distance.ipynb
+            - Chapter07/Mass.ipynb
+        - part: "Chapter 9: HPC"
+          chapters:
+            - Chapter09/Cython_Numba.ipynb
+            - Chapter09/Dask.ipynb
+            - Chapter09/HDF5.ipynb
+            - Chapter09/Parquet.ipynb
+            - Chapter09/Spark.ipynb
+        - part: "Chapter 10: Other Topics"
+          chapters:
+            - Chapter10/Cytoscape.ipynb
+            - Chapter10/GBIF.ipynb
+            - Chapter10/Germline.ipynb
+            - Chapter10/QIIME2_Metagenomics.ipynb
+        - part: "Chapter 11: Machine Learning"
+          chapters:
+            - Chapter11/Preparation.ipynb
+            - Chapter11/Exploration.ipynb
+            - Chapter11/ML_Preparation.ipynb
+            - Chapter11/SVM_Train.ipynb
+            - Chapter11/SVM_Fit.ipynb
+            - Chapter11/Decision_Trees.ipynb
+
+execute:
+  freeze: auto
+
+format:
+  html:
+    theme: cosmo
+    code-copy: true
+    code-fold: true
+
+

@@ -1,7 +1,5 @@
 # Bioinformatics with Python Cookbook, Second Edition
 
-<a href="https://www.packtpub.com/big-data-and-business-intelligence/bioinformatics-python-cookbook-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781789344691"><img src="https://www.packtpub.com/media/catalog/product/cache/4cdce5a811acc0d2926d7f857dceb83b/b/1/b11164_0.png" alt="Bioinformatics with Python Cookbook, Second Edition" height="300px" align="right"></a>
-
 This is the code repository for [Bioinformatics with Python Cookbook, Second Edition](https://india.packtpub.com/in/big-data-and-business-intelligence/bioinformatics-python-cookbook-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781789344691), published by Packt.
 
 **Learn how to use modern Python bioinformatics libraries and applications to do cutting-edge research in computational biology**
@@ -18,9 +16,6 @@ This book covers the following exciting features:
 * Use Python to interact with Galaxy servers
 
 If you feel this book is for you, get your [copy](https://www.amazon.com/dp/10DigitISBN) today!
-
-<a href="https://www.packtpub.com/?utm_source=github&utm_medium=banner&utm_campaign=GitHubBanner"><img src="https://raw.githubusercontent.com/PacktPublishing/GitHub/master/GitHub.png" 
-alt="https://www.packtpub.com/" border="5" /></a>
 
 
 ## Instructions and Navigations

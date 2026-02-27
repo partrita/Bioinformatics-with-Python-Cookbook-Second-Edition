@@ -1,0 +1,111 @@
+# 파이썬을 활용한 생물정보학 쿡북 (Bioinformatics with Python Cookbook) {.unnumbered}
+
+<a href="https://www.packtpub.com/big-data-and-business-intelligence/bioinformatics-python-cookbook-second-edition"><img src="https://www.packtpub.com/media/catalog/product/cache/4cdce5a811acc0d2926d7f857dceb83b/b/1/b11164_0.png" alt="Bioinformatics with Python Cookbook, Second Edition" height="300px" align="right"></a>
+
+이 웹사이트는 Packt에서 출판된 **"파이썬을 활용한 생물정보학 쿡북 (Bioinformatics with Python Cookbook, Second Edition)"**의 상호작용형 Quarto 북 버전입니다.
+
+생물정보학은 기초부터 고등 연산 기술에 이르는 다양한 방법을 통해 생물학적 데이터에서 가치 있는 정보를 추출하는 활발한 연구 분야입니다. 이 책에서는 차세대 서열 분석(NGS), 유전체학(Genomics), 메타게놈(Metagenomics), 집단 유전학(Population Genetics), 계통학(Phylogenetics), 그리고 단백질체학(Proteomics)을 중점적으로 다룹니다.
+
+### 주요 특징
+* 대규모 차세대 서열 분석(NGS) 데이터셋 처리 방법 습득
+* FASTQ, BAM, VCF 형식을 사용한 유전체 데이터 분석
+* 서열 비교 및 계통 발생 재구성 수행
+* 복잡한 단백질체 데이터 분석
+* 파이썬을 활용한 Galaxy 서버와의 상호작용
+
+---
+
+## 데이터셋 (Datasets)
+
+책에서 사용되는 데이터셋 링크입니다.
+
+**중요 참고 사항:**
+
+1. 이 데이터셋들은 제3자가 운영하는 외부 서버에서 제공됩니다.
+2. 보안상의 이유로 FTP 링크는 클릭 가능한 URL로 제공되지 않을 수 있습니다. 링크를 복사하여 브라우저 주소창이나 FTP 클라이언트에 붙여넣어 사용하세요.
+
+### 1. 파이썬 생태계와 R 연동
+*   **sequence.index** (1000 Genomes 프로젝트)
+    `ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/historical_data/former_toplevel/sequence.index`
+
+### 2. 차세대 서열 분석 (NGS)
+*   **SRR003265.filt.fastq.gz** (FASTQ 형식)
+    `ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/phase3/data/NA18489/sequence_read/SRR003265.filt.fastq.gz`
+*   **NA18490_20_exome.bam** (BAM 형식)
+    `ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/phase3/data/NA18489/exome_alignment/NA18489.chrom20.ILLUMINA.bwa.YRI.exome.20121211.bam`
+*   **NA18490_20_exome.bam.bai** (BAM 인덱스)
+    `ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/phase3/data/NA18489/exome_alignment/NA18489.chrom20.ILLUMINA.bwa.YRI.exome.20121211.bam.bai`
+*   **ALL.chr22.phase3...genotypes.vcf.gz** (VCF 형식)
+    `ftp://ftp-trace.ncbi.nih.gov/1000genomes/ftp/release/20130502/supporting/vcf_with_sample_level_annotation/ALL.chr22.phase3_shapeit2_mvncall_integrated_v5_extra_anno.20130502.genotypes.vcf.gz`
+
+### 3. 유전체학 (Genomics)
+*   **[falciparum.fasta](http://plasmodb.org/common/downloads/release-9.3/Pfalciparum3D7/fasta/data/PlasmoDB-9.3_Pfalciparum3D7_Genome.fasta)** (열대열 말라리아 원충 참조 유전체)
+*   **gambiae.fa.gz** (아노펠레스 모기 참조 유전체)
+    `ftp://ftp.vectorbase.org/public_data/organism_data/agambiae/Genome/agambiae.CHROMOSOMES-PEST.AgamP3.fa.gz`
+*   **[atroparvus.fa.gz](https://www.vectorbase.org/download/anopheles-atroparvus-ebroscaffoldsaatre1fagz)**
+*   **[gambiae.gff3.gz](http://www.vectorbase.org/download/anopheles-gambiae-pestbasefeaturesagamp42gff3gz)** (유전체 주석 데이터)
+
+### 4. 집단 유전학 (PopGen)
+*   **[hapmap.map.bz2](http://hapmap.ncbi.nlm.nih.gov/downloads/genotypes/hapmap3/plink_format/draft_2/hapmap3_r2_b36_fwd.consensus.qc.poly.map.bz2)**
+*   **[hapmap.ped.bz2](http://hapmap.ncbi.nlm.nih.gov/downloads/genotypes/hapmap3/plink_format/draft_2/hapmap3_r2_b36_fwd.consensus.qc.poly.ped.bz2)**
+*   **[relationships.txt](http://hapmap.ncbi.nlm.nih.gov/downloads/genotypes/hapmap3/plink_format/draft_2/relationships_w_pops_121708.txt)**
+
+### 5. 단백질 구조 (PDB)
+*   **[1TUP.cif](http://www.rcsb.org/pdb/download/downloadFile.do?fileFormat=cif&compression=NO&structureId=1TUP)** (P53 단백질 구조)
+
+### 6. 대규모 데이터를 위한 파이썬 (HPC)
+*   **SRR003265_1.filt.fastq.gz** (Pair-end 1)
+    `ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/phase3/data/NA18489/sequence_read/SRR003265_1.filt.fastq.gz`
+*   **SRR003265_2.filt.fastq.gz** (Pair-end 2)
+    `ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/phase3/data/NA18489/sequence_read/SRR003265_2.filt.fastq.gz`
+*   **Germline 공유 염색체 세그먼트 데이터**
+    `ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/phase1/analysis_results/shapeit2_phased_haplotypes/`
+
+::: {style="text-align: center; border: 2px solid #007bff; padding: 10px; border-radius: 5px; margin: 20px 0;"}
+**GitHub 사용자 참고 사항**: GitHub에서 이 내용을 보고 계신다면, 노트북이 올바르게 렌더링되도록 브라우저의 현재 탭에서 노트북 파일을 열어주시기 바랍니다.
+:::
+
+---
+
+## 장별 개요 (Chapters Overview)
+
+### [Chapter 1: R과 연동하기](Chapter01/Interfacing_R.ipynb)
+`rpy2`를 사용하여 파이썬과 R의 장점을 모두 활용하는 방법을 배웁니다.
+![example](Chapter01/example.png)
+
+### [Chapter 2: 차세대 서열 분석 (NGS)](Chapter02/Working_with_FASTQ.ipynb)
+FASTQ, BAM, VCF와 같은 일반적인 데이터 형식을 중심으로 대규모 분석을 수행합니다.
+![example](Chapter02/example.png)
+
+### [Chapter 3: 유전체학 (Genomics)](Chapter03/Reference_Genome.ipynb)
+다양한 API를 통해 참조 유전체(Reference Genome), 주석 데이터, 유전자 정보 추출을 탐구합니다.
+![example](Chapter03/example.png)
+
+### [Chapter 4: 집단 유전학 (Population Genetics)](Chapter04/Data_Formats.ipynb)
+집단 단위의 데이터셋에서 기초 통계 분석, 주성분 분석(PCA), 혼합(Admixture) 분석을 수행합니다.
+![example](Chapter04/example.png)
+
+### [Chapter 5: 집단 유전학 시뮬레이션](Chapter05/Basic_SimuPOP.ipynb)
+`simuPOP`을 사용하여 복잡한 인구 통계 시나리오를 모델링하고 선택압(Selection)을 시뮬레이션합니다.
+![example](Chapter05/example.png)
+
+### [Chapter 6: 계통학 (Phylogenetics)](Chapter06/Exploration.ipynb)
+진화적 관계를 이해하기 위해 계통 나무(Phylogenetic Tree)를 재구성하고 시각화합니다.
+![example](Chapter06/example.png)
+
+### [Chapter 7: 단백질체학 (Proteomics)](Chapter07/PDB.ipynb)
+PDB/mmCIF 파일을 사용하여 단백질 구조를 분석하고 기하학적 연산을 수행합니다.
+![example](Chapter07/example.png)
+
+### [Chapter 9: 고급 파이프라인 및 고성능 연산 (HPC)](Chapter09/Cython_Numba.ipynb)
+Cython, Numba, Dask, Spark를 사용하여 생물정보학 코드를 최적화하고 가속화합니다.
+
+### [Chapter 10: 기타 주제](Chapter10/Germline.ipynb)
+Cytoscape를 이용한 네트워크 분석, GBIF 생물다양성 데이터, QIIME2를 활용한 메타게놈 분석을 다룹니다.
+![example](Chapter10/example.png)
+
+---
+
+## 저자 소개
+
+**Tiago Antao**는 유전체학 분야에서 활동 중인 생물정보학자입니다. 파이썬의 주요 생물정보학 패키지인 Biopython의 공동 개발자 중 한 명이며, 케임브리지 대학교, 옥스퍼드 대학교, 몬태나 대학교에서 연구 활동을 수행했습니다.
